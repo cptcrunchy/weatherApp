@@ -1,0 +1,38 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    background: rgb(171, 220, 253);
+    padding:20px;
+}
+.header{
+    grid-row: 1/2;
+    grid-column: 1 / -1;
+    justify-self: start;
+    align-self: center;
+}
+.cityName{
+    grid-column: 1 / -1;
+    grid-row: 2/3;
+    justify-self: start;
+    align-self: center;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 4px 0;
+}
+.col{
+    grid-row: 3/4;
+    grid-column: span 2;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    border: {
+        top:  1px solid #000000;
+        left:  1px solid #000000;
+        bottom:  1px solid #000000;
+    }
+    &:last-child{
+        border-right: 1px solid #000000;
+    }
+}
